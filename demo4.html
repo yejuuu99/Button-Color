@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1 id="title">Click me!</h1>
+	<button id="changeColorBtn">눌러보시오</button>
+	
+	<script>
+		document.querySelector("#changeColorBtn").addEventListener("click", function(){
+			let title = document.querySelector("#title");
+			let currentColor = window.getComputedStyle(title).color; // 현재 적용된 색상 가져오기
+
+			// 현재 색상이 빨간색이면 파란색으로, 그렇지 않으면 빨간색으로 변경
+			if (currentColor === "rgb(255, 0, 0)") { // 빨간색 (RGB 값)
+				title.style.color = "blue";
+			} else {
+				title.style.color = "red";
+			}
+		});
+	</script>
+</body>
+</html
